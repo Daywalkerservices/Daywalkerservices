@@ -1,49 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Desmond Ovuvie Unuaworho | Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-50 text-gray-900 font-sans">
+import React from "react"; import { Card, CardContent } from "@/components/ui/card"; import { Button } from "@/components/ui/button";
 
-  <header class="bg-white shadow p-6 text-center">
-    <h1 class="text-3xl font-bold">Desmond Ovuvie Unuaworho</h1>
-    <p class="mt-2 text-gray-600">Web3 & Blockchain Enthusiast</p>
-  </header>
+export default function Portfolio() { return ( <div className="min-h-screen bg-gray-950 text-white px-4 py-8"> <header className="text-center mb-12"> <h1 className="text-4xl font-bold">Desmond Ovuvie Unuaworho</h1> <p className="text-xl mt-2 text-gray-400"> Web3 & Blockchain Developer </p> </header>
 
-  <main class="max-w-4xl mx-auto p-6 space-y-10">
+<section className="max-w-4xl mx-auto">
+    <Card className="mb-8 bg-gray-900">
+      <CardContent className="p-6">
+        <h2 className="text-2xl font-semibold mb-2">About Me</h2>
+        <p>
+          I’m Desmond Ovuvie Unuaworho, a dedicated Web3 developer driven by innovation in
+          blockchain technology. I build smart contracts, decentralized applications, and
+          user interfaces that connect real-world utility with decentralized power. With each
+          project, I aim to contribute meaningfully to the decentralized future.
+        </p>
+      </CardContent>
+    </Card>
 
-    <section>
-      <h2 class="text-2xl font-semibold border-b-2 border-indigo-600 pb-1 mb-4">About Me</h2>
-      <p>
-        I’m Desmond Ovuvie Unuaworho, a tech-driven creative passionate about Web3, blockchain, and emerging technologies.
-        I'm on a journey to build digital solutions that empower people and solve real-world problems.
-        Currently focused on learning and developing with smart contracts, decentralized apps, and frontend tools.
-      </p>
-    </section>
+    <h2 className="text-3xl font-bold mb-4">Projects</h2>
 
-    <section>
-      <h2 class="text-2xl font-semibold border-b-2 border-indigo-600 pb-1 mb-4">Projects</h2>
-      <ul class="list-disc list-inside space-y-2">
-        <li><strong>Daywalker Services Site:</strong> A business landing page for Daywalker Services — featuring services, contact info, and company highlights.</li>
-        <li><strong>NFT Marketplace DApp:</strong> A decentralized application for creating, buying, and selling NFTs using smart contracts and IPFS.</li>
-        <li><strong>Blockchain Voting App:</strong> A secure and transparent voting system built with Solidity and Web3.js for decentralized governance.</li>
-      </ul>
-    </section>
+    <div className="grid gap-6">
+      <Card className="bg-gray-900">
+        <CardContent className="p-6">
+          <h3 className="text-xl font-semibold">Token Tracker Dashboard</h3>
+          <p className="text-gray-400 mt-1">
+            A sleek dashboard that tracks real-time prices and wallet balances of popular Ethereum-based tokens.
+          </p>
+          <p className="text-sm text-gray-500 mt-1">Tech: React, Ethers.js, CoinGecko API</p>
+        </CardContent>
+      </Card>
 
-    <section>
-      <h2 class="text-2xl font-semibold border-b-2 border-indigo-600 pb-1 mb-4">Contact</h2>
-      <p>Email: <a href="mailto:unuavworhog@gmail.com" class="text-indigo-600 hover:underline">unuavworhog@gmail.com</a></p>
-      <p class="mt-2">LinkedIn: 
-        <a href="https://www.linkedin.com/in/unuavworho-desmond-ovuvie-845a99280" target="_blank" class="text-indigo-600 hover:underline">
-          linkedin.com/in/unuavworho-desmond-ovuvie
-        </a>
-      </p>
-    </section>
+      <Card className="bg-gray-900">
+        <CardContent className="p-6">
+          <h3 className="text-xl font-semibold">Decentralized Voting DApp</h3>
+          <p className="text-gray-400 mt-1">
+            A secure and transparent voting system deployed on Ethereum testnet to demonstrate governance mechanisms.
+          </p>
+          <p className="text-sm text-gray-500 mt-1">Tech: Solidity, Hardhat, React</p>
+        </CardContent>
+      </Card>
 
-  </main>
+      <Card className="bg-gray-900">
+        <CardContent className="p-6">
+          <h3 className="text-xl font-semibold">NFT Minting Platform</h3>
+          <p className="text-gray-400 mt-1">
+            A front-end minting site where users can connect their wallets, upload artwork, and mint NFTs on a testnet.
+          </p>
+          <p className="text-sm text-gray-500 mt-1">Tech: Solidity, Web3.js, IPFS</p>
+        </CardContent>
+      </Card>
 
-</body>
-</html>
+      <Card className="bg-gray-900">
+        <CardContent className="p-6">
+          <h3 className="text-xl font-semibold">Smart Contract Showcase</h3>
+          <p className="text-gray-400 mt-1">
+            A curated collection of reusable smart contracts, hosted on GitHub, with inline documentation and test coverage.
+          </p>
+          <p className="text-sm text-gray-500 mt-1">Tech: Solidity, Hardhat</p>
+        </CardContent>
+      </Card>
+    </div>
+
+    <div className="mt-12">
+      <h2 className="text-3xl font-bold mb-4">Contact</h2>
+      <p>Email: <a href="mailto:unuavworhog@gmail.com" className="text-blue-400">unuavworhog@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/unuavworho-desmond-ovuvie-845a99280" className="text-blue-400" target="_blank">Profile</a></p>
+      <p>GitHub: <a href="https://github.com/Daywalkerservices/Daywalkerservices.github.io" className="text-blue-400" target="_blank">Repository</a></p>
+    </div>
+  </section>
+</div>
+
+); }
+
